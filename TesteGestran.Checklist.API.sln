@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteGestran.Checklist.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteGestran.Checklist.Tests", "TesteGestran.Checklist.Tests\TesteGestran.Checklist.Tests.csproj", "{90329CB2-4A71-4D82-8C23-D7762DD2F30E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteGestran.Checklist.Infra", "TesteGestran.Checklist.Infra\TesteGestran.Checklist.Infra.csproj", "{E223FC03-FA2D-4380-BF13-6A37CD712191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteGestran.Checklist.Infra", "TesteGestran.Checklist.Infra\TesteGestran.Checklist.Infra.csproj", "{E223FC03-FA2D-4380-BF13-6A37CD712191}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
