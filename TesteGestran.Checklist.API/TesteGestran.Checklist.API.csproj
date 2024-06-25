@@ -14,7 +14,7 @@
     <ProjectReference Include="..\TesteGestran.Checklist.Domain\TesteGestran.Checklist.Domain.csproj" />
     <ProjectReference Include="..\TesteGestran.Checklist.Service\TesteGestran.Checklist.Service.csproj" />
     <ProjectReference Include="..\TesteGestran.Checklist.Tests\TesteGestran.Checklist.Tests.csproj" />
-    <ProjectReference Include="..\TesteGestran.Infra\TesteGestran.Checklist.Infra.csproj" />
+    <ProjectReference Include="..\TesteGestran.Checklist.Infra\TesteGestran.Checklist.Infra.csproj" />
   </ItemGroup>
 
 </Project>
