@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesteGestran.Checklist.Domain\TesteGestran.Checklist.Domain.csproj" />
+    <ProjectReference Include="..\TesteGestran.Checklist.Service\TesteGestran.Checklist.Service.csproj" />
+    <ProjectReference Include="..\TesteGestran.Checklist.Tests\TesteGestran.Checklist.Tests.csproj" />
+    <ProjectReference Include="..\TesteGestran.Infra\TesteGestran.Checklist.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
