@@ -12,10 +12,9 @@ namespace TesteGestran.Checklist.Service.Services.Auth
             _authRepository = authRepository;
         }
 
-        public bool IsValidUser(string username, string password)
+        public Domain.Entities.User IsValidUser(string username, string password)
         {
-            var user = _authRepository.GetUserByUsernameAndPassword(username, password);
-            return user != null;
+            return _authRepository.GetUserByUsernameAndPassword(username, password);
         }
     }
 }

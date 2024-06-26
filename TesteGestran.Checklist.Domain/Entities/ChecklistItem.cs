@@ -1,15 +1,15 @@
-﻿using System.Text;
-using TesteGestran.Checklist.Domain.Checklist;
+﻿using TesteGestran.Checklist.Domain.Checklist;
 
 namespace TesteGestran.Checklist.Domain.Entities
 {
     public class ChecklistItem
     {
         public int Id { get; set; }
-        public bool Situacao { get; set; }
+        public bool Verificado { get; set; }
         public string Observacao { get; set; }
         public int ChecklistId { get; set; }
         public Checklist Checklist { get; set; }
+        public string Item { get; set; }
     }
 
     public static class ChecklistItemFactory
@@ -18,9 +18,10 @@ namespace TesteGestran.Checklist.Domain.Entities
         {
             return new ChecklistItem
             {
-                Situacao = command.Situacao,
+                Verificado = command.Verificado,
                 Observacao = command.Observacao,
                 ChecklistId = command.ChecklistId,
+                Item = command.Item
             };
         }
     }

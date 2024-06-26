@@ -32,8 +32,27 @@ namespace TesteGestran.Checklist.Infra.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("Situacao")
+                    b.Property<DateTime?>("DataFinalizacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Etapa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Motorista")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Situacao")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Usuario")
                         .IsRequired()
@@ -55,11 +74,15 @@ namespace TesteGestran.Checklist.Infra.Migrations
                     b.Property<int>("ChecklistId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Item")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Observacao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Situacao")
+                    b.Property<bool>("Verificado")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -92,22 +115,6 @@ namespace TesteGestran.Checklist.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Password = "123",
-                            Role = "Executor",
-                            Username = "user1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Password = "123",
-                            Role = "Supervisor",
-                            Username = "user2"
-                        });
                 });
 
             modelBuilder.Entity("TesteGestran.Checklist.Domain.Entities.ChecklistItem", b =>

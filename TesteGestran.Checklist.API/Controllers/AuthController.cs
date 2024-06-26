@@ -22,11 +22,13 @@ public class AuthController : BaseController
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginCommand loginModel)
     {
-        if (_authService.IsValidUser(loginModel.Username, loginModel.Password))
+        var user = _authService.IsValidUser(loginModel.Username, loginModel.Password);
+        if (user == null)
         {
-            var token = _jwtTokenGenerator.GenerateJwtToken(loginModel.Username);
-            return Response(new { token });
+            return Unauthorized(new { message = "Usuário ou senha inválidos." });
         }
-        return Unauthorized();
+
+        var token = _jwtTokenGenerator.GenerateJwtToken(user.Username, user.Role);
+        return Response(new { token });
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IAuthService
     {
-        bool IsValidUser(string username, string password);
+        Entities.User IsValidUser(string username, string password);
     }
 }
