@@ -18,6 +18,8 @@ git clone <URL_DO_REPOSITORIO>
 cd TesteGestran.Checklist.API
 ```
 
+
+
 ## Configurar o Banco de Dados
   1. Configure sua instância do SQL Server.
   2. Atualize a string de conexão no arquivo appsettings.json:
@@ -31,6 +33,14 @@ cd TesteGestran.Checklist.API
 
 ```bash
 dotnet ef database update
+```
+
+### Script SQL inicial para criar usuários
+```bash
+INSERT INTO Users (Username, Password, Role) VALUES 
+('user1', '123', 'Executor'),
+('user2', '123', 'Executor'),
+('super', '123', 'Supervisor');
 ```
 
 ## Instalação e Execução
