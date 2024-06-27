@@ -80,7 +80,16 @@ builder.Services.AddSwaggerGen();
 
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200", "https://localhost:4200")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
 var app = builder.Build();
 
 // Middleware to intercept 403 Forbidden responses
@@ -104,6 +113,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowSpecificOrigins");
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
