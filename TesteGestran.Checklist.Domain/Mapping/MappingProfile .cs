@@ -17,6 +17,9 @@ namespace TesteGestran.Checklist.Domain.Mapping
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.Usuario, opt => opt.MapFrom(src => src.Usuario))
                 .ForMember(dest => dest.Situacao, opt => opt.MapFrom(src => src.Situacao))
+                .ForMember(dest => dest.Motorista, opt => opt.MapFrom(src => src.Motorista))
+                .ForMember(dest => dest.Placa, opt => opt.MapFrom(src => src.Placa))
+                .ForMember(dest => dest.Tipo, opt => opt.MapFrom(src => src.Tipo))
                 .ForMember(dest => dest.DataCadastro, opt => opt.MapFrom(src => src.DataCadastro))
                 .ForMember(dest => dest.Itens, opt => opt.MapFrom(src => src.Itens));
 
