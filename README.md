@@ -8,7 +8,7 @@ Este projeto é uma API para gerenciar checklists diários de veículos em uma e
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) ou [Visual Studio Code](https://code.visualstudio.com/)
-- [Download da Collection do Postman](https://we.tl/t-tDmKcFQdgK)
+- [Download da Collection do Postman](https://we.tl/t-JVg2Yae5vH)
 
 ## Configuração do Ambiente
 
